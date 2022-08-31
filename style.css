@@ -32,11 +32,22 @@ html {
     align-items: center;
     margin: auto;
     margin-bottom: 40%;
+    transition: 2s all;
 }
 .main form {
     background-color: var(--black);
     display: inline-block;
     /* align-items: center; */
+}
+.legend {
+    color: var(--white);
+    background-color: var(--black);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: bold;
+    text-decoration: underline;
+    /* text-shadow: .8rem .6rem .1rem #1DA1F2; */
 }
 .item {
     color: var(--white);
@@ -46,29 +57,46 @@ html {
     margin: 0 calc(50% - 150px);
     margin-top: 3rem;
     border: none;
+    outline: none;
     border-bottom: 1px solid var(--white);
 }
-.item:nth-child(1)::placeholder::before {
-    content: "\f007";
-}
 .item:nth-child(2){
-    font-size: 2.2rem;
     margin-top: 5rem;
 }
-.item::-moz-focus-outer {
-    border: none;
+
+.item:nth-child(3) {
+    font-size: 2.2rem;
+}
+.item:focus {
+    border-bottom: 1px solid var(--white);
 }
 .item::placeholder {
     font-size: 1.3rem;
     text-align: center;
     text-decoration: underline;
 }
+.pass-olvi {
+    width: 80%;
+    display: block;
+    margin-top: 1.5rem;
+    margin-left: 80%;
+    color: red;
+    background-color: var(--black);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.pass-olvi i{
+    content: "";
+    min-height: 2rem;
+    min-width: 2rem;
+    color: red;
+}
 .send {
     font-size: 1.8rem;
     background-color: var(--black);
     padding: 0 2rem;
     border-radius: 8px;
-    margin-top: 6rem;
+    margin-top: 5rem;
     display: block;
     color: var(--white);
     border-bottom: 1px solid var(--white);
@@ -79,6 +107,11 @@ html {
     box-shadow: 0 0 20px rgba(37, 218, 191, 0.825), inset 0 0 14px rgba(37, 218, 191, 0.825);
     transform: scale(1.1);
     color: white;
+}
+.fa-solid {
+    margin-left: .5rem;
+    background-color: transparent;
+    color: var(--white);
 }
 /* Section social-red */
 .social-red{
